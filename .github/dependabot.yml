@@ -15,6 +15,3 @@ updates:
     # Check for updates every day (can also be "weekly" or "monthly")
     schedule:
       interval: "daily"
-
-# Open up to 5 pull requests at any time for version updates
-open-pull-requests-limit: 5
