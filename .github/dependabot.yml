@@ -1,0 +1,20 @@
+version: 2
+updates:
+  # Enable updates for NPM
+  - package-ecosystem: "npm"
+    # Look for `package.json` and `package-lock.json` in the root directory
+    directory: "/"
+    # Check the npm registry for updates every day (can also be "weekly" or "monthly")
+    schedule:
+      interval: "daily"
+
+  # Enable updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    # Look for `.github/workflows` directory for GitHub Actions workflows
+    directory: "/"
+    # Check for updates every day (can also be "weekly" or "monthly")
+    schedule:
+      interval: "daily"
+
+# Open up to 5 pull requests at any time for version updates
+open-pull-requests-limit: 5
