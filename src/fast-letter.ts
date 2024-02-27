@@ -17,17 +17,38 @@ export class FastLetter extends LitElement {
       margin: 0 auto;
       text-align: center;
       background-color: var(--fast-letter-background-color);
+      --fast-letter-font-family: 'Source Sans Pro';
+      --fast-letter-font-size: 12px;
     }
 
     main {
       flex-grow: 1;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .letter {
+      position: relative;
+      width: 210mm;
+      height: 297mm;
+      border: none;
+      margin: 10px;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      background-color: white;
     }
   `;
 
   render() {
     return html`
       <main>
-        <letter-body></letter-body>
+        <div class="container">
+          <div class="letter">
+            <letter-body></letter-body>
+          </div>
+        </div>
       </main>
     `;
   }
