@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
+import './letter-body.js';
 
 const logo = new URL('../../assets/open-wc-logo.svg', import.meta.url).href;
 
@@ -55,7 +56,7 @@ export class FastLetter extends LitElement {
       <main>
         <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
         <h1>${this.header}</h1>
-
+        <letter-body></letter-body>
         <p>Edit <code>src/FastLetter.ts</code> and save to reload.</p>
         <a
           class="app-link"
