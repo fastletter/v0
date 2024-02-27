@@ -23,10 +23,33 @@ Max Mustermann GmbH`;
 @customElement('letter-body')
 export class LetterBody extends LitElement {
   // Define scoped styles right with your component, in plain CSS
-  static styles = css``;
+  static styles = css`
+    .letter-body {
+      position: relative;
+      left: 25mm;
+      top: 95.46mm;
+      width: 165mm;
+      height: 150mm;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100%;
+      resize: none;
+      border: none;
+      hyphens: auto;
+      text-align: justify;
+      text-justify: inter-character;
+      outline: none;
+      font-family: var(--fast-letter-font-family);
+      font-size: var(--fast-letter-font-size);
+    }
+  `;
 
   // Render the UI as a function of component state
   render() {
-    return html`<textarea placeholder="${defaultLetterContent}"></textarea>`;
+    return html`<div class="letter-body">
+      <textarea placeholder="${defaultLetterContent}"></textarea>
+    </div>`;
   }
 }
