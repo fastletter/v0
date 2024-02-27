@@ -1,7 +1,7 @@
 import { LitElement, css, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 
-const defaultLetterContent = `Betreff: Anfrage bezüglich Ihrer Produktpalette
+export const defaultLetterContent = `Betreff: Anfrage bezüglich Ihrer Produktpalette
 
 Sehr geehrter Herr Schmidt,
 
@@ -25,12 +25,8 @@ export class LetterBody extends LitElement {
   // Define scoped styles right with your component, in plain CSS
   static styles = css``;
 
-  // Declare reactive properties
-  @property()
-  text: string = defaultLetterContent;
-
   // Render the UI as a function of component state
   render() {
-    return html`<textarea placeholder="${this.text}"></textarea>`;
+    return html`<textarea placeholder="${defaultLetterContent}"></textarea>`;
   }
 }
