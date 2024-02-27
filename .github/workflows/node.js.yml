@@ -18,9 +18,6 @@ jobs:
         node-version: 20
         cache: 'npm'
     - run: npm ci
-    - uses: browser-actions/setup-chrome@v1
-      with:
-        chrome-version: stable
     - run: npm run lint
     - run: npm test
     - run: npm run build
