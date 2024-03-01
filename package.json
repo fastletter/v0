@@ -30,7 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^5.48.0",
     "@typescript-eslint/parser": "^5.48.0",
     "@web/dev-server": "^0.4.3",
-    "@web/rollup-plugin-html": "^1.11.0",
+    "@web/rollup-plugin-html": "^2.1.2",
     "@web/rollup-plugin-import-meta-assets": "^2.2.1",
     "@web/test-runner": "^0.18.0",
     "@web/test-runner-puppeteer": "^0.15.0",
